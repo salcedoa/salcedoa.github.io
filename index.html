@@ -27,8 +27,8 @@
   <tr>
     <td class="infotd">
       <h3>Andreas Salcedo</h3>
-      <p>Computer Science undergraduate at City, University of London. I have some knowledge of 
-        Python, JavaScript, HTML & CSS. Currently learning Java.
+      <p>I'm 18 years old and currently studying Computer Science at City, University of London. 
+        I have some knowledge of Python, JavaScript, HTML & CSS.
       </p> 
     </td>
     <td>
@@ -43,11 +43,29 @@
 
  <tr>
   <td class="infotd">
-    <h3>Bootcamp 2020: Random Terrain Generator</h3>
+    <h3>Bootcamp 2020: 3D Terrain Generator</h3>
+    <h4>09/10/20<h4>
     <p>
-	My first programming project, concluding the 2 week Programming Bootcamp at 
-	City (2020). This Processing project demonstrates a comprehensive understanding 
-	of the use of arrays, loops, and randomness. I created randomised terrain generator.
+      My first programming project, concluding the 2 week Programming Bootcamp at 
+      City (2020). It is in the "Calm my nerves" theme. This Processing project demonstrates a comprehensive understanding 
+      of the use of loops, arrays, randomization and working with 3D objects.
+      I created a randomized 3D terrain generator.
+    </p>
+    <p>
+      This generator creates new landscapes using the coordinates of vertices which make up
+      2D strips of triangles which make up a gridlike surface. By rotating them and modifiying the 
+      Z positions of these vertices I was able to raise and lower certain points to give 
+      the effect of hilly or mountainous terrain. In order to avoid gaps in flat layer I stored
+      these coordinates in a 2D array so that it would be easier for each strip to connect
+      with a shared side of coordinates.
+    </p>
+    <p>
+      I simulated a day light cycle by playing with lighting methods, more specifically
+      <b>directionalLight()</b> which allowed me to control the position and hue of the light.
+      Using a sin() calculation I was able to get the light to smoothly bob above and below 
+      the surface of the planes which increased and decreased the light level. This also meant
+      that I wouldn't have to keep the polygon outlines visible as the shadows created by the
+      light showed depth.
     </p>
 
     <p>
