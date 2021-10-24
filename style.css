@@ -114,6 +114,7 @@ iframe {
 .cards a:hover {
   text-shadow: 0px 0px 1px white;
   text-decoration: none;
+  border: solid 1px var(--text);
 }
 
 /* CARD THUMBNAILS */
