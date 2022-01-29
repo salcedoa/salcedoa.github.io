@@ -193,14 +193,14 @@ iframe {
   .main {
     max-width: 60%;
     margin: 0 auto;
-    margin-bottom: 3em;
+    padding-bottom: 3em;
     font-size: 110%;
   }
 
   .home-main {
     max-width: 650px;
     margin: 0 auto;
-    margin-bottom: 3em;
+    padding-bottom: 3em;
     font-size: 110%;
   }
 }
