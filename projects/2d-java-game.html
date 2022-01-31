@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+  <title>Andreas Salcedo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+    
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="../index.html">Andreas Salcedo</a></li>
+    </ul>
+  </nav>
+
+	<div class="main">
+		<h2>2D Java Game: The Dungeon</h2>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/KtgpCZtWC2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<p>
+			As part of my course's first year programming module, I developed a 2D game using Java.
+			The Game itself resembled an arcade-style dungeon crawler with the gameplay mechanics and 
+			assests taken from <a href="https://scratch.mit.edu/projects/101424916/">a game</a>
+			I made in Scratch for a school project some years ago.
+		</p>
+		<p>
+			The project was developed using a wrapper library (CityEngine) for JBox2D which was provided by the university.
+			This served as a physics engine that helped me set up a 2D environment and create objects that moved and 
+			interacted with eachother in accordance to the laws of physics.
+		</p>
+		<a href="../media/2d-java-game1.png" target="_blank"><img src="../media/2d-java-game1.png" class="image-horizontal"></a>
+		<p>
+			I initially focussed on showcasing my applications of inheritence and polymorphism among classes.
+			This involved extending functionality of classes in the physics engine to better suit my implementation.
+			All the enemies and their behaviour in the game are extensions of the Monster class which I created by 
+			extending the engine's Walker class.<br>
+			Other notable features include text file handeling to keep track of high scores as well as working with
+			different GUI layouts using the Swing library.
+		</p>
+		<p>
+			However, I payed less attention to my project's structure during early development. Having now gained a better
+			appreciation of <i>low coupling</i> and <i>cohesion</i> between classes, on reflection I could've avoided
+			using global variables and kept better track of where certain functions were carried out. This would have 
+			also simplified the process of bug finding and fixing.<br>
+			The project may also have benefited from more controller classes and interfaces to help organise class
+			associations as well as collection classes to manage enemies on each level instead of having to create multiple
+			timers to check if an enemy needed to dissapear from view.
+		</p>
+		<a href="../media/2d-java-game2.png" target="_blank"><img src="../media/2d-java-game2.png" class="image-horizontal"></a>
+		<p>
+			In conclusion, working on this project gave me a valuable insight into object orienatated programming.
+			I also became comfortable with coding in Java and had good introduction to creating graphical user interfaces
+			in Swing.
+			This has been one of my first projects where I've used version control software (Git) to track my progress
+			and document development.
+		</p>
+
+		<p>Check out the code on Github <a href="https://github.com/salcedoa/2D-Java-Game" target="_blank">here</a>.</p>
+		<div class="home-link">
+			<a href="../index.html">Back</a>
+		</div>
+	</div>
+</body>
