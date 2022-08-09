@@ -3,7 +3,7 @@
   <title>Andreas Salcedo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
-    
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,10 @@
       <li><a href="../index.html">Andreas Salcedo</a></li>
     </ul>
   </nav>
+
+  <div id="myModal" class="modal">
+	<img class="modal-content" id="full_img">
+  </div>
 
 	<div class="main">
 		<h2>2D Java Game: The Dungeon</h2>
@@ -31,7 +35,7 @@
 			This served as a physics engine that helped me set up a 2D environment and create objects that moved and 
 			interacted with eachother in accordance to the laws of physics.
 		</p>
-		<a href="../media/2d-java-game1.png" target="_blank"><img src="../media/2d-java-game1.png" class="image-horizontal"></a>
+		<img src="../media/2d-java-game1.png" class="image-horizontal zoomable" id="img1">
 		<p>
 			I initially focussed on showcasing my applications of inheritence and polymorphism among classes.
 			This involved extending functionality of classes in the physics engine to better suit my implementation.
@@ -49,7 +53,7 @@
 			associations as well as collection classes to manage enemies on each level instead of having to create multiple
 			timers to check if an enemy needed to dissapear from view.
 		</p>
-		<a href="../media/2d-java-game2.png" target="_blank"><img src="../media/2d-java-game2.png" class="image-horizontal"></a>
+		<img src="../media/2d-java-game2.png" class="image-horizontal zoomable">
 		<p>
 			In conclusion, working on this project gave me a valuable insight into object orienatated programming.
 			I also became comfortable with coding in Java and had good introduction to creating graphical user interfaces
@@ -63,4 +67,5 @@
 			<a href="../index.html">Back</a>
 		</div>
 	</div>
+	<script src="../script.js"></script>
 </body>
