@@ -95,6 +95,11 @@ h1 {
   margin: 0 0.5em;
 }
 
+#socials img {
+  max-width: 48px;
+  width: 11vw;
+}
+
 .projects {
   margin-top: 2em;
 }
