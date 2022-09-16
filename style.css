@@ -118,6 +118,10 @@ h1 {
   color: white !important;
 }
 
+.tag:hover {
+  cursor: pointer;
+}
+
 .selected-tag {
   border: solid 3px white;
 }
