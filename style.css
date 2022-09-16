@@ -96,13 +96,53 @@ h1 {
 }
 
 #socials img {
-  max-width: 48px;
+  max-width: 40px;
   width: 11vw;
 }
 
 .projects {
   margin-top: 2em;
 }
+
+/************ PROJECT TAGS ****************/
+
+.tag-names {
+  margin-bottom: 1em;
+  line-height: 26px;
+}
+
+.tag {
+  font-size: small !important;
+  border-radius: 1rem;
+  padding: 2px 5px;
+  color: white !important;
+}
+
+.selected-tag {
+  border: solid 3px white;
+}
+
+.python-tag {
+  background-color: #648adb;
+}
+
+.web-dev-tag {
+  background-color: #64a3b3;
+}
+
+.graphics-tag {
+  background-color: #579b71;
+}
+
+.java-tag {
+  background-color: #dda132;
+}
+
+.cpp-tag {
+  background-color: #9782bf;
+}
+
+/**************************************/
 
 .image-square, .image-left, .image-right {
   width: 50%;
