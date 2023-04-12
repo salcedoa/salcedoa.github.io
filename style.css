@@ -1,8 +1,8 @@
 :root {
-  --background: rgb(211 211 211);
-  --highlight: rgb(175, 156, 155);
-  --text: rgb(97, 92, 92);
-  --link: rgb(201, 121, 238);
+  --background: antiquewhite;
+  --highlight: rgb(221 196 157);
+  --text: #606060;
+  --link: rgb(200, 133, 231);
 }
 
 * {
@@ -286,7 +286,7 @@ iframe {
 @media only screen and (min-width: 769px) {
   /* For laptops and small screens */
   .main {
-    max-width: 60%;
+    max-width: 650px;
     margin: 0 auto;
     padding-bottom: 3em;
     font-size: 110%;
@@ -297,13 +297,5 @@ iframe {
     margin: 0 auto;
     padding-bottom: 3em;
     font-size: 110%;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  /* For desktops and larger screens */
-  .main {
-    max-width: 40%;
-    width: 600px;
   }
 }
