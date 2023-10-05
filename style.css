@@ -188,7 +188,6 @@ h1 {
 
 iframe {
   width: 100%;
-  height: 30%;
   border: solid 1px var(--text);
   background: black;
 }
