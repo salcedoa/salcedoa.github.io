@@ -12,18 +12,12 @@
     </head>
     
     <body>
-      <nav class="navbar">
-        <ul>
-          <li><a href="../index.html">Andreas Salcedo</a></li>
-        </ul>
-      </nav>
-
-      <div id="myModal" class="modal">
-        <img class="modal-content" id="full_img">
-      </div>
-
       <div class="main">
-        <h2>Processing: 3D Terrain Generator</h2>
+        <nav class="navbar">
+          <h2><a href="../index.html">Andreas Salcedo</a></h2>
+        </nav>
+
+        <h3>Processing: 3D Terrain Generator</h3>
 
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qtH-0yANvfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -36,13 +30,13 @@
         
         <p>
           This generator creates new landscapes using the coordinates of vertices which make up
-          2D strips of triangles which form a gridlike 2D surface. By rotating this surface and 
+          2D strips of triangles which form a grid-like 2D surface. By rotating this surface and 
           modifying the Z positions of the vertices, I was able to raise and lower certain points
           to give the effect of hilly or mountainous terrain. To avoid gaps between the strips, 
-          I stored these coordinates in a 2D array so that it would be easier to pair neighbouring strips
+          I stored these coordinates in a 2D array so that it would be easier to pair neighboring strips
           with a shared side of coordinates.
         </p>
-        <img src="../media/terrainGen3.JPG" alt="screenshot" class="image-square zoomable">
+        <a href="../media/terrainGen3.JPG"><img src="../media/terrainGen3.JPG" alt="screenshot" class="image-square"></a>
         <p>
           I simulated a day-night cycle by playing with lighting methods, more specifically
           <b>directionalLight()</b> which allowed me to control the position and hue of the light.
@@ -53,7 +47,7 @@
         </p>
 
 
-        <img src="../media/terrainGen1.png" alt="screenshot" class="image-horizontal zoomable">
+        <a href="../media/terrainGen1.png"><img src="../media/terrainGen1.png" alt="screenshot" class="image-horizontal"></a>
         
         <p>
           Overall, I learnt a lot about working with 3D graphics and Processing. This was the first 
