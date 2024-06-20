@@ -1,3 +1,9 @@
+/* Import Open Sans with font weights 400 and 700 */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Import Roboto with font weight 500 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 :root {
   --background: antiquewhite;
   --highlight: rgb(221 196 157);
@@ -26,7 +32,12 @@ a:hover {
 }
 
 img {
+  width: 500px;
   max-width: 100%;
+}
+
+figcaption {
+  font-size: small;
 }
 
 .home-link {
@@ -45,20 +56,15 @@ img {
   text-decoration: none;
 }
 
-h1, h2 {
-  color: black;
-}
-
 /*****************************/
 /* NAVBAR */
 .navbar {
-  color: black;
   border-bottom: 1px solid var(--highlight);
   padding: 0.3em;
 }
 
 .navbar a {
-  color: black;
+  color: var(--text);
 }
 /******************************/
 
@@ -192,14 +198,13 @@ iframe {
 	margin-bottom: 25px;
 }
 
-.card-box b { color: black; }
-
 .card-box:hover b {
   text-decoration-line: underline;
 }
 
 @media only screen and (min-width: 481px) {
   /* For tablets */
+
   .image-square {
     width: 35%;
   }
@@ -242,6 +247,7 @@ iframe {
 
 @media only screen and (min-width: 769px) {
   /* For laptops and small screens */
+  
   .main {
     max-width: 650px;
     margin: 0 auto;

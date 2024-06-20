@@ -4,11 +4,6 @@
         <title>Andreas Salcedo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../style.css">
-        
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap" rel="stylesheet">
     </head>
     
     <body>
@@ -17,48 +12,23 @@
           <h2><a href="../index.html">Andreas Salcedo</a></h2>
         </nav>
 
-        <h3>Processing: 3D Terrain Generator</h3>
+        <h3>3D Terrain Generator</h3>
 
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qtH-0yANvfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-        <p>
-          My first programming project, concluding the 2-week Programming Bootcamp at 
-          City (2020). It is in the 3D Graphics theme. This Processing project demonstrates a comprehensive understanding 
-          of the use of loops, arrays, randomization and working with 3D graphics.
-          I created a randomized 3D terrain generator.
-        </p>
+        <p>During a 2-week programming bootcamp at university, I developed a 3D terrain generator using <a href="https://processing.org/">Processing</a>, a language similar to Java with out-of-the-box graphics support. This project served as an introduction to working with 3D graphics, classes, 2D arrays, and randomization.</p>
         
-        <p>
-          This generator creates new landscapes using the coordinates of vertices which make up
-          2D strips of triangles which form a grid-like 2D surface. By rotating this surface and 
-          modifying the Z positions of the vertices, I was able to raise and lower certain points
-          to give the effect of hilly or mountainous terrain. To avoid gaps between the strips, 
-          I stored these coordinates in a 2D array so that it would be easier to pair neighboring strips
-          with a shared side of coordinates.
-        </p>
-        <a href="../media/terrainGen3.JPG"><img src="../media/terrainGen3.JPG" alt="screenshot" class="image-square"></a>
-        <p>
-          I simulated a day-night cycle by playing with lighting methods, more specifically
-          <b>directionalLight()</b> which allowed me to control the position and hue of the light.
-          Using a sin wave calculation, I was able to get the light to smoothly bob above and below 
-          the surface of the planes which increased and decreased the light level. This also meant
-          that I wouldn't have to keep the polygon outlines visible as the shadows created by the
-          light showed depth.
-        </p>
+        <p>The terrain generator constructs randomized landscapes by manipulating vertex coordinates to form 2D strips of triangles. These strips are combined to create a grid-like 3D surface. By adjusting the Z positions of the vertices, I simulated hilly and mountainous terrain. To ensure continuity between the strips, I used a 2D array to manage the vertex coordinates, facilitating the pairing of neighboring strips.</p>
 
+        <a href="../media/terrainGen3.JPG"><img src="../media/terrainGen3.JPG" alt="screenshot" class="image-square"></a>
+        <p>To highlight the terrain's depth, I added a <a href="https://processing.org/reference/directionalLight_.html">directional light</a> to the scene which created shadows across the terrain. Using a sine wave calculation, the position of this new light source could be smoothly shifted up and down the y-axis. In this way, a day-night cycle was simulated.</p>
 
         <a href="../media/terrainGen1.png"><img src="../media/terrainGen1.png" alt="screenshot" class="image-horizontal"></a>
         
-        <p>
-          Overall, I learnt a lot about working with 3D graphics and Processing. This was the first 
-          programming project where I created and used Class objects. I've wanted to create a terrain
-          generator for quite a while now and had done some related research for my IB Maths internal
-          assessment last year.
-        </p>
+        <p>The program consists of two instances of the <i>plane</i> class: <i>land</i> and <i>water</i>. With <i>land</i> having noisier terrain and dynamic colour changes while the <i>water</i> instance is much flatter. This project marked my first experience creating and using class objects, which enhanced my understanding of object-oriented design.</p>
 
-        <p>
-          Check out the code on Github <a href="https://github.com/salcedoa/adbs952/" target="_blank">here</a>.
-        </p>
+        <p>My interest in terrain generation, which I had previously explored during my IB Maths internal assessment, provided a solid foundation for this work. The complete code for this project is available on <a href="https://github.com/salcedoa/adbs952/" target="_blank">GitHub</a>.</p>
+
         <div class="home-link">
           <a href="../index.html">Back</a>
         </div>

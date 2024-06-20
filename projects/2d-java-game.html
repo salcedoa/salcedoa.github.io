@@ -4,10 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,47 +12,53 @@
 			<h2><a href="../index.html">Andreas Salcedo</a></h2>
 		</nav>
 		
-		<h3>2D Java Game: The Dungeon</h3>
+		<h3>The Dungeon: 2D Java Game</h3>
+		
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/KtgpCZtWC2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<p>
-			As part of my course's first-year programming module, I developed a 2D game using Java.
-			The Game itself resembled an arcade-style dungeon crawler with the gameplay mechanics and 
-			assets taken from <a href="https://scratch.mit.edu/projects/101424916/">a game</a>
-			I made in Scratch for a school project some years ago.
-		</p>
-		<p>
-			The project was developed using a wrapper library (CityEngine) for JBox2D which was provided by the university.
-			This served as a physics engine that helped me set up a 2D environment and create objects that moved and 
-			interacted with each other following the laws of physics.
-		</p>
-		<a href="../media/2d-java-game1.png"><img src="../media/2d-java-game1.png" class="image-horizontal" id="img1"></a>
-		<p>
-			I initially focussed on showcasing my applications of inheritance and polymorphism among classes.
-			This involved extending the functionality of classes in the physics engine to better suit my implementation.
-			All the enemies and their behaviour in the game are extensions of the Monster class which I created by 
-			extending the engine's Walker class.<br>
-			Other notable features include text file handling to keep track of high scores as well as working with
-			different GUI layouts using the Swing library.
-		</p>
-		<p>
-			However, I paid less attention to my project's structure during its early development. Having now gained a better
-			appreciation of <i>low coupling</i> and <i>cohesion</i> between classes, on reflection I could've avoided
-			using global variables and kept better track of where certain functions were carried out. This would have 
-			also simplified the process of bug finding and fixing.<br>
-			The project may also have benefited from more controller classes and interfaces to help organize class
-			associations as well as collection classes to manage enemies on each level instead of having to create multiple
-			timers to check if an enemy needed to disappear from view.
-		</p>
-		<a href="../media/2d-java-game2.png"><img src="../media/2d-java-game2.png" class="image-horizontal"></a>
-		<p>
-			In conclusion, working on this project gave me valuable insight into object-orientated programming.
-			I also became comfortable with coding in Java and had a good introduction to creating graphical user interfaces
-			in Swing.
-			This has been one of my first projects where I've used version control software (Git) to track my progress
-			and document development.
-		</p>
+		
+		<h4>Why did I make this?</h4>
 
-		<p>Check out the code on Github <a href="https://github.com/salcedoa/2D-Java-Game" target="_blank">here</a>.</p>
+		<p>For my undergraduate first-year Java programming module, the coursework required me to develop a game using Java. I had made a <a href="https://scratch.mit.edu/projects/101424916/">small game</a> in Scratch as part of a school project in 2016 and always intended to translate it into a text-based programming language. Also, having finished my <a href="terrain-generator.html">previous project</a> using Processing, moving on to a multi-class project in actual Java felt like the next logical step.</p>
+
+		<h4>What resources/knowledge did I have?</h4>
+
+		<p>Most of my previous programming experience had been in Python. Although I had played around with the <a href="https://docs.python.org/3/library/tkinter.html">Tkinter</a> library, the bulk of these Python projects were short TUI programs. However, this helped me with picking up Java quickly during the module as the underlying concepts remained the same.</p>
+
+		<p>At this point, I had also been given hands-on tutorials with using the CityEngine wrapper library for <a href="http://www.jbox2d.org/">JBox2D</a>, provided by my university. This external library served as a physics engine that students could use in the coursework. Along with this, we were provided with a <a href="https://www.staff.city.ac.uk/~sbkg566/IN1007/javadoc/">documentation guide</a> to consult whilst working with the library.</p>
+
+		<p>To define the scope of the project, we were given a coursework brief which listed all the requirements expected at each of the three milestones. This would influence my general work plan.
+		Finally, as Java projects are best developed with proprietary IDEs, I was given an educational license for IntelliJ IDEA. The features of which I was introduced to during the module tutorials.</p>
+
+		<h4>How did I develop it?</h4>
+
+		<p>I used a minimal working example with the physics engine as a starting point. Working closely with the CityEngine documentation, I extended existing classes to represent different monsters, items, and levels. Some game textures were reused from my original Scratch project. GUI elements were created using the Swing library, which was particularly challenging for me as I struggled with IntelliJ's integrated GUI builder. Instead, I opted to write the GUI components directly in code. I also implemented text file handling for persistent storage of high scores.</p>
+
+		<a href="../media/the-dungeon-uml.png"><img src="../media/the-dungeon-uml.png" alt="A UML class diagram of the project showing inheritance of classes."></a>
+		<figcaption>A rough outline of the class inheritance within the project. Most of my classes originate from three CityEngine classes.</figcaption>
+
+		<p>Enemy AI was implemented using an internal state machine for each class instance. The physics engine operated in steps. By using its StepListener class, I could evaluate conditions at each step to determine what actions an enemy should take. Conditions included the enemy's distance to the player or whether it had recently taken damage. For non-physics-based interactions like shield blocking, I created invisible static objects to act as sensors.</p>
+
+		<p>The development of this project occurred in two phases. Initially, I created a basic version focusing on meeting the specified requirements. No version control was used in this phase. However, I eventually dumped the project files into a GitHub repository once the module had finished.</p>
+
+		<p>In the second phase, I focused on improving the game during the summer. This involved adding a new level and monster type, better enemy pathfinding, and a title screen. During this phase, I used Git to track my progress and manage changes across my laptop and PC. This was my first experience using Git so extensively.</p>
+
+		<h4>Outcome</h4>
+
+		<p>The game has three levels, each with a unique monster type. To progress to the next level, the player must reach a specific score threshold. Once the third level is complete, a winning screen is presented allowing the player to return to the title screen menu.</p>
+
+		<p>All the source code files are grouped into a single package called "game". Looking back, I would've preferred to split entity, GUI, and level classes into separate packages. While the game's implementation is working, there's a lot to be optimized as the project lacked a formal design phase. Understanding the full relationships between classes would have been helpful during debugging. Towards the end, I heavily relied on adding global variables which violated encapsulation principles within my codebase. Along with these hacky solutions, cohesion progressively lowered as unplanned dependencies formed between classes. This could have been avoided by creating a class diagram at an earlier stage, showing me where refactoring would've been most appropriate.</p>
+
+		<a href="../media/2d-java-game1.png"><img src="../media/2d-java-game1.png" id="img1"></a>
+		<figcaption>Level 3</figcaption>
+
+		<p>Working with the documentation was a central theme. However, overlooking specific features, such as improper use of image attachments and running unnecessary physics calculations with the state machine, led to noticeable lag in the game's third level. Similarly, my inexperience with file path configurations and proper resource management led to issues when exporting the game as a .jar file. As a result, the game is best run when executed through the IntelliJ IDE.</p>
+
+		<a href="../media/2d-java-game2.png"><img src="../media/2d-java-game2.png"></a>
+		<figcaption>Level 2</figcaption>
+
+		<p>In conclusion, this project taught me a lot about object-oriented programming and Java. I gained skills in building interfaces with Swing and began using Git for version control. I gained an appreciation for planning and designing large projects to help easily maintain and add to a larger codebase.</p>
+
+		<p>The full source code for this project is available on <a href="https://github.com/salcedoa/2D-Java-Game" target="_blank">GitHub</a>.</p>
 		<div class="home-link">
 			<a href="../index.html">Back</a>
 		</div>
