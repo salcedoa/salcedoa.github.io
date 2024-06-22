@@ -26,19 +26,19 @@
     <p>Student research project comparing classification models on a dataset of website characteristics.</p>
     <p>Final report: [<a href="/media/IN3062_Report.pdf">PDF</a>]</p>
 		<p>GitHub Repo: [<a href="https://github.com/saini-shiven/IntroToAIGroup1" target="_blank">Link</a>]</p>
-		<h3>Project Motivation</h3>
+		<h4>Why did I do this?</h4>
     <p>The coursework for the Introduction to AI module at university required us to apply different AI techniques to a "machine learning problem" of our choice in a group project and to compare and contrast ways to evaluate our chosen problem data. I wanted to choose a problem related to either web development or cybersecurity. This was an elective module, and I chose it because I wanted to learn more about artificial intelligence.</p>
     <p>It should be noted, I began this module in late 2022, shortly before the release of ChatGPT which brought generative AI to mainstream attention. Previously, I was aware of GitHub CoPilot and had seen other AI-related projects from peers.</p>
 
-    <h3>What resources/knowledge did I have?</h3>
+    <h4>What resources/knowledge did I have?</h4>
     <p>In the lectures, we were taught the theoretical background of AI, classification, and regression models. During the tutorials, we gained hands-on experience with <a href="https://jupyter.org/">Jupyter Notebook</a> and <a href="https://www.spyder-ide.org/">Spyder</a>. We had access to public datasets from <a href="https://www.kaggle.com/">Kaggle</a> and Google Dataset Search. Although I was comfortable with Python, the primary libraries we used were <a href="https://scikit-learn.org/stable/">scikit-learn</a>, <a href="https://matplotlib.org/">Matplotlib</a>, <a href="https://numpy.org/">NumPy</a>, and <a href="https://pandas.pydata.org/">Pandas</a> which I had not used before.</p>
 
-    <h3>Method</h3>
+    <h4>Method</h4>
     <p>This was a group research project that would produce a final report. We began by creating a GitHub repository and a shared Google Drive. The first step was to find a "machine learning problem" to apply artificial intelligence techniques. I found a <a href="https://www.kaggle.com/datasets/akashkr/phishing-website-dataset">dataset</a> on Kaggle containing 11,055 data points, each listing 30 characteristics of a website (mainly of its URL) and labelling the website as either phishing or non-phishing.</p>
     <p>We chose a classification problem based on this dataset. We trained various models on a fraction of the data points, tasking each model with predicting the labels of the remaining data points based on their characteristics.</p>
     <p>Using the sklearn.metrics module, we evaluated their effectiveness by generating confusion matrices and measuring accuracy. Additionally, we performed fine-tuning techniques to observe their effects on accuracy. Our project evaluated eight models, with each member responsible for two. I evaluated the Decision Tree and Naive Bayes models.</p>
 
-    <h3>Outcome</h3>
+    <h4>Outcome</h4>
 
     <p>Our dataset required minimal preprocessing, though its non-continuous nature (mostly consisting of -1s, 0s and 1s) impacted predictions for certain models. Surprisingly, the linear regression model achieved our success criteria of 90% accuracy, reaching 92% without major preprocessing.</p>
     <p>We focused our experimentation on dropping columns before splitting the dataset into training and validation sets. Dropping the columns "having_Sub_Domain" and "double_slash_redirecting" improved accuracy, particularly for the support vector machine (87% to 92%) and Naive Bayes models (59% to 68%).</p>
