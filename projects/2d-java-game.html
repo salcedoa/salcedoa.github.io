@@ -34,7 +34,7 @@
 		<p>I used a minimal working example with the physics engine as a starting point. Working closely with the CityEngine documentation, I extended existing classes to represent different monsters, items, and levels. Some game textures were reused from my original Scratch project. GUI elements were created using the Swing library, which was particularly challenging for me as I struggled with IntelliJ's integrated GUI builder. Instead, I opted to write the GUI components directly in code. I also implemented text file handling for persistent storage of high scores.</p>
 
 		<a href="../media/the-dungeon-uml.png"><img src="../media/the-dungeon-uml.png" alt="A UML class diagram of the project showing inheritance of classes."></a>
-		<figcaption>A rough outline of the class inheritance within the project. Most of my classes originate from three CityEngine classes.</figcaption>
+		<figcaption>A rough overview of the class inheritance within the project. Most of my classes originate from three CityEngine classes.</figcaption>
 
 		<p>Enemy AI was implemented using an internal state machine for each class instance. The physics engine operated in steps. By using its StepListener class, I could evaluate conditions at each step to determine what actions an enemy should take. Conditions included the enemy's distance to the player or whether it had recently taken damage. For non-physics-based interactions like shield blocking, I created invisible static objects to act as sensors.</p>
 

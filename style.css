@@ -48,12 +48,10 @@ figcaption {
 
 .home-link a {
   color: var(--text);
-  text-decoration: underline;
 }
 
 .home-link a:hover {
   text-shadow: none;
-  text-decoration: none;
 }
 
 /*****************************/
@@ -198,7 +196,7 @@ iframe {
 	margin-bottom: 25px;
 }
 
-.card-box:hover b {
+.card-box:hover h3 {
   text-decoration-line: underline;
 }
 
@@ -242,6 +240,7 @@ iframe {
 
   .home-link {
     text-align: left;
+    padding-top: 1em;
   }
 }
 
@@ -261,7 +260,7 @@ iframe {
   }
 
   /* Includes all project titles */
-  .about, .home-main b {
+  .about {
     font-size: 110%;
   }
 }
